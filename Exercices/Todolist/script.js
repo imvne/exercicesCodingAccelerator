@@ -24,3 +24,14 @@ list.addEventListener('click', (e) => {
 function storage(){
     window.localStorage.todoList = list.innerHTML;
 }
+function getValues(){
+    let storageContent = window.localStorage.todoList;
+    if(!storageContent){
+        list.innerHTML =
+        '<li>Cliquez sur un to-do pour le supprimer</li>';
+    }
+    else {
+        list.innerHTML = storageContent;
+    }
+}
+getValues();
