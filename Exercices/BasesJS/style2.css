@@ -9,6 +9,7 @@ body {
     margin: 0;
     color: white;
     min-height: 200vh;
+    overflow-x: hidden;
 }
 
 .box {
@@ -22,4 +23,51 @@ p {
     visibility: hidden;
     width: 240px;
     margin: 10px auto 0;
+    opacity: 0;
+    transition: 0.6s;
+    transform: translateX(-200px);
+}
+
+.question-clicked {
+    background: pink;
+}
+
+.show-response {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mousemove {
+    height: 30px;
+    width: 30px;
+    border: 2px solid pink;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+nav {
+    background: teal;
+    position: fixed;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    height: 70px;
+    top: -70px;
+    transition: 0.3s ease;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
 }
